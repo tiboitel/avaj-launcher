@@ -1,8 +1,8 @@
 package com.avaj.Simulator;
 
 import com.avaj.Interface.Flyable;
-import com.avaj.Crafts.AircraftFactory;
-import com.avaj.Weather.WeatherTower;
+import com.avaj.Crafts.*;
+import com.avaj.Tower.WeatherTower;
 import java.io.*;
 import java.util.*;
 
@@ -12,11 +12,13 @@ public class Simulator {
 
 	public static void	main(String[] args) throws IOException
 	{
-		try
-		{
-		}
-		catch (Exception e)
-		{
-		}
+		// Lire le scenario.
+		// Instancier une tour meteo.
+		// Instancier tout les volants via la Factory.
+		// Enregistrer tout les volants aupres de la tour.
+		// Jouer la simulation.
+		System.out.println("");
+		return ;
 	}
+	
 }
