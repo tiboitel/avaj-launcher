@@ -5,6 +5,7 @@ import Tower.WeatherTower;
 import Crafts.*;
 import java.io.*;
 import java.util.*;
+import java.lang.*;
 
 public class Simulator {
 	private static WeatherTower weatherTower = new WeatherTower();
@@ -22,16 +23,25 @@ public class Simulator {
 				if (Integer.parseInt(line.split(" ")[0]) < 0)
 				{
 					System.err.println("Invalid simulation count in scenario, can be 0 or negative.");
-					return ;
+					return;
 				}
 			}
 			while ((line = reader.readLine()) != null)
 			{
-				// Split line to getting all flyer attribute.
-				System.out.println(line);
+				String[] values = line.split(" ");
+				if (values.length != 5)
+				{
+					System.err.println("Invalid file format { }");
+				}
+				System.out.println(values[2]);
+				Flyable flyable = AircraftFactory.newAircraft(values[0], values[1], Integer.parseInt(values[2]), Integer.parseInt(values[3]), Integer.parseInt(values[4]));
+				flyableList.add(flyable);
 			}
-		}
-		catch (Exception e)
+			for (Flyable flyable : flyableList)
+			{
+				flyable.registerTower(weatherTower);
+			}
+		} catch (Exception e)
 		{
 			System.out.println(e.getMessage());
 		}
