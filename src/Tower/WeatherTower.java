@@ -1,6 +1,6 @@
-package com.avaj.Tower;
+package Tower;
 
-import com.avaj.Crafts.Coordinates;
+import Crafts.Coordinates;
 
 public class WeatherTower
 {
@@ -10,7 +10,7 @@ public class WeatherTower
 
 	public String	getWeatherCoordinates(Coordinates coordinates)
 	{
-		String	weatherCoordinates = String.valueOf(coordinates.getLattitude());
-		return weatherCoordinates;
+		String message = "Rotoplo";
+		return message;
 	}
 }

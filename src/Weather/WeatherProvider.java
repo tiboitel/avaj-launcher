@@ -1,7 +1,7 @@
-package com.avaj.Weather;
+package Weather;
 
-import com.avaj.Crafts.Coordinates;
-import com.avaj.Interface.Flyable;
+import Interface.Flyable;
+import Crafts.Coordinates;
 
 public class WeatherProvider
 {

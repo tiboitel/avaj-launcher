@@ -1,11 +1,11 @@
-package com.avaj.Crafts;
+package Crafts;
 
-import com.avaj.Interface.Flyable;
+import Interface.Flyable;
 
 public class AircraftFactory
 {
-	public Flyable newAircraft(String type, String name, int longitude, int latitude, int height)
+	/* public Flyable newAircraft(String type, String name, int longitude, int latitude, int height)
 	{
-
-	}
+		
+	}*/
 }
