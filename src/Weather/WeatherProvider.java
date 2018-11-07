@@ -2,24 +2,31 @@ package Weather;
 
 import Interface.Flyable;
 import Crafts.Coordinates;
+import java.util.Random;
+import Logger.*;
 
 public class WeatherProvider
 {
-	private WeatherProvider weatherProvider;
-	private String		weather;
+	private static WeatherProvider weatherProvider = null;
+	private String[] weather;
 
 	public WeatherProvider()
 	{
+		this.weather = new String[]{"RAIN", "FOG", "SUN", "SNOW"};
 	}
 
-	public WeatherProvider getProvider()
+	public static WeatherProvider getProvider()
 	{
-		return this.weatherProvider;
+		if (weatherProvider == null)
+			weatherProvider = new WeatherProvider();
+		return weatherProvider;
 	}
 
 	public String getCurrentWeather(Coordinates coordinates)
 	{
-		return this.weather;
+		int seed = new Random().nextInt(weather.length);
+		String currentWeather = (weather[seed]);	
+		return currentWeather;
 	}
 }
 

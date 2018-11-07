@@ -1,16 +1,17 @@
 package Tower;
 
 import Crafts.Coordinates;
+import Weather.WeatherProvider;
 
-public class WeatherTower
+public class WeatherTower extends Tower
 {
-	private void	changeWeather()
+	public void	changeWeather()
 	{
+		conditionsChanged();
 	}
 
-	public String	getWeatherCoordinates(Coordinates coordinates)
+	public String	getWeather(Coordinates coordinates)
 	{
-		String message = "Rotoplo";
-		return message;
+		return (WeatherProvider.getProvider().getCurrentWeather(coordinates));
 	}
 }

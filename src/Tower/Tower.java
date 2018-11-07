@@ -28,8 +28,12 @@ public class Tower
 			System.out.println("Can not unregister a flyable");
 		}
 	}
-
+	
 	protected void conditionsChanged()
 	{
+		for (Flyable flyable: observers)
+		{
+			flyable.updateConditions();
+		}
 	}
 }

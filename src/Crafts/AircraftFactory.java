@@ -1,6 +1,7 @@
 package Crafts;
 
 import Interface.Flyable;
+import Crafts.*;
 
 public class AircraftFactory
 {
@@ -10,6 +11,12 @@ public class AircraftFactory
 		
 		switch (type)
 		{
+			case "Helicopter":
+				return new Helicopter(name, coordinates);
+			case "JetPlane":
+				return new JetPlane(name, coordinates);
+			case "Baloon":
+				return new Baloon(name, coordinates);
 			default:
 				return null;
 		}

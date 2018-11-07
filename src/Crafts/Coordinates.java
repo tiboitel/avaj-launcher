@@ -17,4 +17,14 @@ public class Coordinates
 	{
 		return this.latitude;
 	}
+
+	public int getLongitude()
+	{
+		return this.longitude;
+	}
+
+	public int getHeight()
+	{
+		return this.height;
+	}
 }
