@@ -11,6 +11,10 @@ public class Coordinates
 		this.longitude = longitude;
 		this.latitude = latitude;
 		this.height = height;
+		if (height > 100)
+			height = 100;
+		if (height <= 0)
+			height = 0;
 	}
 
 	public int getLatitude()

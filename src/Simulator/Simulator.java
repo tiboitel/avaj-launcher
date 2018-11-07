@@ -34,7 +34,7 @@ public class Simulator {
 				String[] values = line.split(" ");
 				if (values.length != 5)
 				{
-					logger.log(Level.ERROR, "Invalid file format { }");
+					logger.log(Level.ERROR, "Invalid file format { Name, ID, Longitude, Latitude, Height }");
 				}
 				Flyable flyable = AircraftFactory.newAircraft(values[0], values[1], Integer.parseInt(values[2]), Integer.parseInt(values[3]), Integer.parseInt(values[4]));
 				flyableList.add(flyable);
@@ -45,7 +45,7 @@ public class Simulator {
 			}
 			for (int i = 0; i < cycle; i++)
 			{
-				logger.log("simulation.txt", "Simulation: " + i);
+				logger.log("simulation.txt", "Simulation: " + i + "\n");
 				weatherTower.changeWeather();
 			}
 				
@@ -53,10 +53,5 @@ public class Simulator {
 		{
 			System.out.println(e.getMessage());
 		}
-		// Lire le scenario.
-		// Instancier une tour meteo.
-		// Instancier tout les volants via la Factory.
-		// Enregistrer tout les volants aupres de la tour.
-		// Jouer la simulation.
 	}
 }
