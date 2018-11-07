@@ -14,6 +14,8 @@ public class Simulator {
 	private static Logger logger = Logger.getLogger();
 	public static void	main(String[] args) throws IOException
 	{
+		if (args.length <= 0 || args.length > 1)
+			System.exit(-1);
 		try
 		{
 			int cycle = 0;
@@ -51,7 +53,7 @@ public class Simulator {
 				
 		} catch (Exception e)
 		{
-			System.out.println(e.getMessage());
+			logger.log(Level.ERROR, "An error has occured when running the simulation: " + e.getMessage());
 		}
 	}
 }

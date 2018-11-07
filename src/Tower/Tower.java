@@ -2,10 +2,12 @@ package Tower;
 
 import Interface.Flyable;
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class Tower
 {
 	private ArrayList<Flyable> observers = new ArrayList<Flyable>();
+	private	ArrayList<Flyable> unregistered = new ArrayList<Flyable>();
 
 	public void register(Flyable flyable)
 	{
@@ -20,20 +22,19 @@ public class Tower
 
 	public void unregister (Flyable flyable)
 	{
-		try
-		{
-			observers.remove(flyable);
-		} catch (Exception e)
-		{
-			System.out.println("Can not unregister a flyable");
-		}
+		if (unregistered.contains(flyable))
+			return ;
+		unregistered.add(flyable);
 	}
 	
 	protected void conditionsChanged()
 	{
-		for (Flyable flyable: observers)
+		Iterator<Flyable> itr = observers.iterator();
+		while (itr.hasNext())
 		{
+			Flyable flyable= itr.next();
 			flyable.updateConditions();
 		}
+		observers.remove(unregistered);
 	}
 }

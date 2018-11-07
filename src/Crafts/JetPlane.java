@@ -40,12 +40,16 @@ public class JetPlane extends Aircraft implements Flyable
 		}
 		if (this.coordinates.getHeight() <= 0)
 		{
+			Logger.getLogger().log("simulation.txt", "Tower says: " + idString + " unregistered from weather tower.\n");
 			weatherTower.unregister(this);
 		}
 	}
 
 	public void registerTower(WeatherTower weatherTower)
 	{
+		String idString = "JetPlane#" + this.name + "(" + this.id + "): ";
+
+		Logger.getLogger().log("simulation.txt", "Tower says: " + idString + " registered from weather tower.\n");
 		this.weatherTower = weatherTower;
 		weatherTower.register(this);
 	}
