@@ -1,6 +1,6 @@
-package Interface;
+package avaj.Interface;
 
-import Tower.WeatherTower;
+import avaj.Tower.WeatherTower;
 
 public interface Flyable
 {

@@ -1,4 +1,4 @@
-package Crafts;
+package avaj.Crafts;
 
 public class Coordinates
 {

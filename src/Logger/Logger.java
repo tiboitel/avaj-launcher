@@ -1,4 +1,4 @@
-package Logger;
+package avaj.Logger;
 
 import java.io.File;
 import java.io.FileWriter;

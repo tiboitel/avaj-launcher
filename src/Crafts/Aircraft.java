@@ -1,6 +1,6 @@
-package Crafts;
+package avaj.Crafts;
 
-import Crafts.Coordinates;
+import avaj.Crafts.Coordinates;
 
 public class Aircraft
 {

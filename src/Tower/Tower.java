@@ -1,6 +1,6 @@
-package Tower;
+package avaj.Tower;
 
-import Interface.Flyable;
+import avaj.Interface.Flyable;
 import java.util.ArrayList;
 import java.util.Iterator;
 

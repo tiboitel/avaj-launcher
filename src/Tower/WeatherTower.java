@@ -1,7 +1,7 @@
-package Tower;
+package avaj.Tower;
 
-import Crafts.Coordinates;
-import Weather.WeatherProvider;
+import avaj.Crafts.Coordinates;
+import avaj.Weather.WeatherProvider;
 
 public class WeatherTower extends Tower
 {

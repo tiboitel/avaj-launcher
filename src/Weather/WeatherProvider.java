@@ -1,9 +1,9 @@
-package Weather;
+package avaj.Weather;
 
-import Interface.Flyable;
-import Crafts.Coordinates;
+import avaj.Interface.Flyable;
+import avaj.Crafts.Coordinates;
+import avaj.Logger.*;
 import java.util.Random;
-import Logger.*;
 
 public class WeatherProvider
 {

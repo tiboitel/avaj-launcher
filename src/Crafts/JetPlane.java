@@ -1,9 +1,9 @@
-package Crafts;
+package avaj.Crafts;
 
-import Crafts.Aircraft;
-import Interface.Flyable;
-import Tower.WeatherTower;
-import Logger.*;
+import avaj.Crafts.Aircraft;
+import avaj.Interface.Flyable;
+import avaj.Tower.WeatherTower;
+import avaj.Logger.*;
 
 public class JetPlane extends Aircraft implements Flyable
 {

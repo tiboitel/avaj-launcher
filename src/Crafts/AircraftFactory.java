@@ -1,7 +1,7 @@
-package Crafts;
+package avaj.Crafts;
 
-import Interface.Flyable;
-import Crafts.*;
+import avaj.Interface.Flyable;
+import avaj.Crafts.*;
 
 public class AircraftFactory
 {

@@ -1,9 +1,9 @@
-package Simulator;
+package avaj.Simulator;
 
-import Interface.Flyable;
-import Tower.WeatherTower;
-import Crafts.*;
-import Logger.*;
+import avaj.Interface.Flyable;
+import avaj.Tower.WeatherTower;
+import avaj.Crafts.*;
+import avaj.Logger.*;
 import java.io.*;
 import java.util.*;
 import java.lang.*;
