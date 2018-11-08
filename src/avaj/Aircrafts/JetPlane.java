@@ -1,6 +1,6 @@
-package avaj.Crafts;
+package avaj.Aircrafts;
 
-import avaj.Crafts.Aircraft;
+import avaj.Aircrafts.Aircraft;
 import avaj.Interface.Flyable;
 import avaj.Tower.WeatherTower;
 import avaj.Logger.*;

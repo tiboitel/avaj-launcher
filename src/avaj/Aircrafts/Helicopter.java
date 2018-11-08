@@ -1,15 +1,15 @@
-package avaj.Crafts;
+package avaj.Aircrafts;
 
-import avaj.Crafts.Aircraft;
+import avaj.Aircrafts.Aircraft;
 import avaj.Interface.Flyable;
 import avaj.Tower.WeatherTower;
 import avaj.Logger.*;
 
-public class Baloon extends Aircraft implements Flyable
+public class Helicopter extends Aircraft implements Flyable
 {
 	private WeatherTower weatherTower;
 
-	Baloon(String name, Coordinates coordinates)
+	Helicopter(String name, Coordinates coordinates)
 	{
 		super(name, coordinates);
 	}
@@ -17,7 +17,7 @@ public class Baloon extends Aircraft implements Flyable
 	public void updateConditions()
 	{
 		String	weather = weatherTower.getWeather(this.coordinates);
-		String idString = "Baloon#" + this.name + "(" + this.id + "): ";
+		String idString = "Helicopter#" + this.name + "(" + this.id + "): ";
 
 		switch (weather)
 		{
@@ -47,7 +47,7 @@ public class Baloon extends Aircraft implements Flyable
 
 	public void registerTower(WeatherTower weatherTower)
 	{
-		String idString = "Baloon#" + this.name + "(" + this.id + "): ";
+		String idString = "Helicopter#" + this.name + "(" + this.id + "):";
 
 		Logger.getLogger().log("simulation.txt", "Tower says: " + idString + " registered from weather tower.\n");
 		this.weatherTower = weatherTower;

@@ -1,7 +1,7 @@
 package avaj.Weather;
 
 import avaj.Interface.Flyable;
-import avaj.Crafts.Coordinates;
+import avaj.Aircrafts.Coordinates;
 import avaj.Logger.*;
 import java.util.Random;
 

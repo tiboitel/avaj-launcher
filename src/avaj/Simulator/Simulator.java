@@ -2,24 +2,33 @@ package avaj.Simulator;
 
 import avaj.Interface.Flyable;
 import avaj.Tower.WeatherTower;
-import avaj.Crafts.*;
+import avaj.Aircrafts.*;
 import avaj.Logger.*;
 import java.io.*;
 import java.util.*;
 import java.lang.*;
 
-public class Simulator {
+public class Simulator 
+{
 	private static WeatherTower weatherTower = new WeatherTower();
 	private static List<Flyable> flyableList = new ArrayList<>();
 	private static Logger logger = Logger.getLogger();
+	
 	public static void	main(String[] args) throws IOException
 	{
 		if (args.length <= 0 || args.length > 1)
+		{
+			logger.log(Level.ERROR, "Usage: avaj_launcher [namefile]");
 			System.exit(-1);
+		}
 		try
 		{
+			File file = new File("simulation.txt");
 			int cycle = 0;
-			File file = new File(args[0]);
+
+			if (file.exists() && !file.isDirectory())
+				file.delete();
+			file = new File(args[0]);
 			BufferedReader reader = new BufferedReader(new FileReader(file));
 			String line = reader.readLine();
 
