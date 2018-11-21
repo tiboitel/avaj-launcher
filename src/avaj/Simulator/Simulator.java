@@ -2,6 +2,7 @@ package avaj.Simulator;
 
 import avaj.Interface.Flyable;
 import avaj.Tower.WeatherTower;
+import avaj.Exception.*;
 import avaj.Aircrafts.*;
 import avaj.Logger.*;
 import java.io.*;
@@ -35,18 +36,13 @@ public class Simulator
 			if (line != null)
 			{
 				if ((cycle = Integer.parseInt(line.split(" ")[0])) < 0)
-				{
-					logger.log(Level.ERROR, "Invalid simulation count in scenario, can be 0 or negative.");
-					return;
-				}
+					throw new InvalidCycleException("Invalid simulation count in scenario, can't be 0 or negative.");
 			}
 			while ((line = reader.readLine()) != null)
 			{
 				String[] values = line.split(" ");
 				if (values.length != 5)
-				{
-					logger.log(Level.ERROR, "Invalid file format { Name, ID, Longitude, Latitude, Height }");
-				}
+					throw new ScenarioFileFormatException("Invalid file format { Name, ID, Longitude, Latitude, Height }");
 				Flyable flyable = AircraftFactory.newAircraft(values[0], values[1], Integer.parseInt(values[2]), Integer.parseInt(values[3]), Integer.parseInt(values[4]));
 				flyableList.add(flyable);
 			}
@@ -63,6 +59,7 @@ public class Simulator
 		} catch (Exception e)
 		{
 			logger.log(Level.ERROR, "An error has occured when running the simulation: " + e.getMessage());
+			return;
 		}
 	}
 }
