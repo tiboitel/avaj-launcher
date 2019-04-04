@@ -3,7 +3,7 @@ package avaj.Aircrafts;
 import avaj.Aircrafts.Aircraft;
 import avaj.Interface.Flyable;
 import avaj.Tower.WeatherTower;
-import avaj.Logger.*;
+import avaj.Logger.Logger;
 
 public class Helicopter extends Aircraft implements Flyable
 {

@@ -4,10 +4,14 @@ ifeq (run,$(firstword $(MAKECMDGOALS)))
 endif
 
 all:
-	@find . -name "*.java" -print0 | xargs -0 javac -sourcepath ./src 
+	find . -name "*.java" -print0 | xargs -0 javac
 
-.phony: run all
+clean:
+	find . -name "*.class" -printf0 | xargs -0 rm -rf
+
+re: clean all
 
 run:
-	@java -classpath ./src/ avaj/Simulator/Simulator $(RUN_ARGS)
+	java avaj.Simulator.Simulator $(RUN_ARGS)
 
+.phony: run all

@@ -3,6 +3,7 @@ package avaj.Logger;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import avaj.Logger.*;
 
 public class Logger
 {
@@ -15,9 +16,9 @@ public class Logger
 		return logger;
 	}
 
-	public void log(Level level, String message)
+	public void log(Level output_fd, String message)
 	{
-		switch (level)
+		switch (output_fd)
 		{
 			case STANDARD:
 				System.out.println(message);
@@ -30,6 +31,7 @@ public class Logger
 
 	public void log(String file, String message)
 	{
+		Level output_fd = Level.ERROR;
 		try
 		{
 			File		fd = new File(file);
@@ -39,7 +41,7 @@ public class Logger
 			writer.flush();
 		} catch (Exception e)
 		{
-			log(Level.ERROR, "Couln't write into the file: " + file);
+			log(output_fd, "Couln't write into the file: " + file);
 		}
 	}
 }

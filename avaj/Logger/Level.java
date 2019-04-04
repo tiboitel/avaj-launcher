@@ -1,6 +1,7 @@
 package avaj.Logger;
 
-public enum Level {
+public enum Level
+{
 	STANDARD,
 	ERROR;
 }

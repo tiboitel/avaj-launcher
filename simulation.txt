@@ -1,0 +1,35 @@
+Tower says: Baloon#B1(0):  registered from weather tower.
+Tower says: Baloon#B2(1):  registered from weather tower.
+Tower says: JetPlane#J1(2):  registered from weather tower.
+Tower says: Helicopter#H1(3): registered from weather tower.
+Tower says: Helicopter#H2(4): registered from weather tower.
+Tower says: Helicopter#H3(5): registered from weather tower.
+Tower says: Baloon#B3(6):  registered from weather tower.
+Tower says: JetPlane#J2(7):  registered from weather tower.
+Tower says: Helicopter#H4(8): registered from weather tower.
+Tower says: Baloon#B4(9):  registered from weather tower.
+Simulation: 0
+Baloon#B1(0): Some sun light, lets take some pictures. (Long +2, H +4)
+Tower says: Baloon#B1(0):  unregistered from weather tower.
+Baloon#B2(1): It's snowing out of here (H -15)
+JetPlane#J1(2): It's raining. Better watch out for lightning. (Lat +5))
+Helicopter#H1(3): Some sun light, lets take some pictures. (Long +2, H +4)
+Helicopter#H2(4): It's snowing out of here (H -15)
+Helicopter#H3(5): It's raining. Better watch out for lightning. (H -5)
+Baloon#B3(6): It's raining. Better watch out for lightning. (H -5)
+JetPlane#J2(7): It's snowing out of here (H -7)
+Helicopter#H4(8): It's snowing out of here (H -15)
+Baloon#B4(9): It's raining. Better watch out for lightning. (H -5)
+Simulation: 1
+Baloon#B1(0): Some sun light, lets take some pictures. (Long +2, H +4)
+Tower says: Baloon#B1(0):  unregistered from weather tower.
+Baloon#B2(1): It's raining. Better watch out for lightning. (H -5)
+JetPlane#J1(2): I cant see anything! (Lat +1)
+Helicopter#H1(3): It's snowing out of here (H -15)
+Tower says: Helicopter#H1(3):  unregistered from weather tower.
+Helicopter#H2(4): It's snowing out of here (H -15)
+Helicopter#H3(5): I cant see anything! (H -3)
+Baloon#B3(6): Some sun light, lets take some pictures. (Long +2, H +4)
+JetPlane#J2(7): Some sun light, lets take some picutres. (Lat +10, H +2)
+Helicopter#H4(8): It's raining. Better watch out for lightning. (H -5)
+Baloon#B4(9): Some sun light, lets take some pictures. (Long +2, H +4)
