@@ -4,10 +4,10 @@ ifeq (run,$(firstword $(MAKECMDGOALS)))
 endif
 
 all:
-	find . -name "*.java" -print0 | xargs -0 javac
+	@find . -name "*.java" -print0 | xargs -0 javac
 
 clean:
-	find . -name "*.class" -printf0 | xargs -0 rm -rf
+	@find . -name "*.class" -print0 | xargs -0 rm -rf
 
 re: clean all
 
